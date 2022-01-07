@@ -1,0 +1,19 @@
+{
+    "name": "codeforces confetti",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "showers confetti if your problem is accepted in codeforces",
+    "background": {
+        "scripts": ["confetti.js"],
+        "persistent": true
+    },
+    "browser_action": {
+        "default_title": "reward yourself :)",
+        "default_icon": "confetti_icon.png"
+    },
+    "content_scripts": [{
+        "matches": ["https://codeforces.com/submissions"],
+        "js": ["confetti.js"]
+    }],
+    "permissions": ["https://codeforces.com"]
+}
